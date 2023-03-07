@@ -1,0 +1,2799 @@
+{
+	"info": {
+		"_postman_id": "a646358c-31ff-43ff-bfca-ede2ea115262",
+		"name": "Awn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4735692"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "1-register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_number",
+											"value": "1010056348",
+											"type": "text"
+										},
+										{
+											"key": "mobile_number",
+											"value": "510010034",
+											"type": "text"
+										},
+										{
+											"key": "date_of_birth",
+											"value": "2022-06-18",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "112233445566",
+											"type": "text"
+										},
+										{
+											"key": "default_language",
+											"value": "ar",
+											"type": "text"
+										},
+										{
+											"key": "referred_by",
+											"value": "616TcM",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password_confirmation",
+											"value": "112233445566",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/register",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3-verify",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "code",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "id_number",
+											"value": "100032001115",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/verify",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"verify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Resend login code",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MDY4NTIwMiwiZXhwIjoxNjQwNjg4ODAyLCJuYmYiOjE2NDA2ODUyMDIsImp0aSI6ImRWamc1cHRKUTFsWDN3WXgiLCJzdWIiOjE5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.oa1P9cjNzus6W4iD7_bXNfpSkPglzjzjFroQc_VB4ns",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_number",
+											"value": "1234567891234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-path}}/resend-login-code",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"resend-login-code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2-Resend verification code",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MDY4NTIwMiwiZXhwIjoxNjQwNjg4ODAyLCJuYmYiOjE2NDA2ODUyMDIsImp0aSI6ImRWamc1cHRKUTFsWDN3WXgiLCJzdWIiOjE5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.oa1P9cjNzus6W4iD7_bXNfpSkPglzjzjFroQc_VB4ns",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "device_token",
+										"value": "fdfdfdfdfdfdfdfdfdfd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_number",
+											"value": "100032001115",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/resend-verification-code",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"resend-verification-code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "loginCodeByEmail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_number",
+											"value": "100020001000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/send-login-code-by-email",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"send-login-code-by-email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "VerificationCodeByEmail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_number",
+											"value": "100020001000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/send-verification-code-by-email",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"send-verification-code-by-email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5-login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_number",
+											"value": "1080113119",
+											"description": "server",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Aa-12345",
+											"description": "server",
+											"type": "text"
+										},
+										{
+											"key": "device_token",
+											"value": "47556",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "ios",
+											"type": "text"
+										},
+										{
+											"key": "id_number",
+											"value": "1010056347",
+											"description": "local",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "112233445566",
+											"description": "local",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/login",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-login-code",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "en",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_number",
+											"value": "5222233337",
+											"type": "text"
+										},
+										{
+											"key": "mobile_number",
+											"value": "01063578275",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/get-login-code",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"get-login-code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forget-password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_number",
+											"value": "1080113119",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/forget-password",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"forget-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verify forget password code",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_number",
+											"value": "1080113119",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "9764",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/verify-forget-password",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"verify-forget-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SaveForgetPassword",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_number",
+											"value": "1080113119",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "Bhp6NIwTLKgdLhBD9PLWG05Hd7zZbPP3OyxYuApUtrbISpkOHm",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Aa-12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/save-new-password",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"save-new-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reset-password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id_number",
+											"value": "100020001000",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Password@123",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "Password@123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-path}}/reset-password",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"reset-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLmZ1ZGV4LXRlY2gubmV0XC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE2MzcwNjUyNTgsImV4cCI6MTYzNzA2ODg1OCwibmJmIjoxNjM3MDY1MjU4LCJqdGkiOiJQdUptaWtUdlhUbDZwNHpjIiwic3ViIjoxOSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.fTZlLI26jSZvaDtCZ_RK9bPef59916tQEaw_fZ18JL8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "device_token",
+											"value": "54564",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "ios",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://awn.fudex-tech.net/public/api/logout",
+									"protocol": "https",
+									"host": [
+										"awn",
+										"fudex-tech",
+										"net"
+									],
+									"path": [
+										"public",
+										"api",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "profile-edit",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NTUzMTgyMiwiZXhwIjoxNjQ2NzQxNDIyLCJuYmYiOjE2NDU1MzE4MjIsImp0aSI6ImxKZEN5Y0daZDFtVUhEcFciLCJzdWIiOjcxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.jaX0EbFSSm_Qr5jr2A3t3Giep85uazKQfeHqJwM0VHQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "employee",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "Mmk@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "work_entity_name",
+											"value": "ee",
+											"type": "text"
+										},
+										{
+											"key": "total_monthly_expenses",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "total_monthly_obligations",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "home",
+											"value": "rental",
+											"type": "text"
+										},
+										{
+											"key": "marital_status",
+											"value": "single",
+											"type": "text"
+										},
+										{
+											"key": "iban[0]",
+											"value": "1222464614364646466464661",
+											"type": "text"
+										},
+										{
+											"key": "bank_id[0]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "iban[1]",
+											"value": "122246461436464646646466155",
+											"type": "text"
+										},
+										{
+											"key": "bank_id[1]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "number_of_children",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "number_of_domestic_workers",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "salary",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "city_id",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "region_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "building_number",
+											"value": "xxxxxxxxxxxxxxx",
+											"type": "text"
+										},
+										{
+											"key": "street_name",
+											"value": "xxxxxxxx",
+											"type": "text"
+										},
+										{
+											"key": "postal_code",
+											"value": "111111",
+											"type": "text"
+										},
+										{
+											"key": "unit_number",
+											"value": "xxxxxxxxxxx",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-path}}/profile-edit",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"profile-edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change-password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLmZ1ZGV4LXRlY2gubmV0XC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE2MzgwODkwMzIsImV4cCI6MTYzODA5MjYzMiwibmJmIjoxNjM4MDg5MDMyLCJqdGkiOiJDTkVPb2ZuclVPc3NwYWlXIiwic3ViIjoxOSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.jP9G_-HGztB-CIlGonLKKDPS1Dv6duGDI5S1CWaLNPU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "12345678@Aa",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "12345678@Aa",
+											"type": "text"
+										},
+										{
+											"key": "old_password",
+											"value": "Admin@123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://awn.fudex-tech.net/public/api/resend-code",
+									"protocol": "https",
+									"host": [
+										"awn",
+										"fudex-tech",
+										"net"
+									],
+									"path": [
+										"public",
+										"api",
+										"resend-code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MjA3MzUzMiwiZXhwIjoxNjQzMjgzMTMyLCJuYmYiOjE2NDIwNzM1MzIsImp0aSI6ImRZSzcwWFpyWmtpMjV1RGYiLCJzdWIiOjI1LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.Xo-LOXCagA6N7C-kNc7pKyt6XgiF8G9qLaxZxcLv9oQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{awn-path}}/profile",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update avatar",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MDY3MDA3NCwiZXhwIjoxNjQwNjczNjc0LCJuYmYiOjE2NDA2NzAwNzQsImp0aSI6InFqeHVKeG40UzRHTWl6SmwiLCJzdWIiOjE5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.GoHLvlipdjmMChacFnypc14PSAYHyCZsnSNjbM1bNI4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": "/C:/Users/adham/Desktop/اغاني مودي/WhatsApp Image 2021-12-08 at 13.24.07.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-path}}/avatar",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"avatar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refresh token",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTMwNzkwMywiZXhwIjoxNjQyNTE3NTAzLCJuYmYiOjE2NDEzMDc5MDMsImp0aSI6IkNWaVFGaTc1dkJ6NFVLb2giLCJzdWIiOjE5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.R3UF8VCbzaoMVOi7SOK6asp0ARgR1ZUVUvWr10L3dS4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{awn-path}}/refresh-token",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"refresh-token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Send loan code by mail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{awn-path}}/loans/send-email",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"loans",
+										"send-email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4-Get Nafaz Login Link",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://awn.fudex-tech.net/public/api/nafaz-login-link",
+									"protocol": "http",
+									"host": [
+										"awn",
+										"fudex-tech",
+										"net"
+									],
+									"path": [
+										"public",
+										"api",
+										"nafaz-login-link"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete account",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY2MTk0MjE4OCwiZXhwIjoxNjYzMTUxNzg4LCJuYmYiOjE2NjE5NDIxODgsImp0aSI6IjM1dzF3eUdwaGVJalBEVk0iLCJzdWIiOjMsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.qIir4rNNqGfvzF0QyprvctQFZXwvyyElcVulMM1Uk4I",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{awn-path}}/delete-account",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"delete-account"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Bank-accounts",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLXNhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjY0Nzg1NzM1LCJleHAiOjE2NjU5OTUzMzUsIm5iZiI6MTY2NDc4NTczNSwianRpIjoibHNTVW80VW9UU2Q2THY2byIsInN1YiI6OCwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.0gUr30EvUhfprcu5PEd6ImYK7jtYcA40tUQBVub-ZJg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{awn-server}}/bank-accounts",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"bank-accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLXNhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjYxODgzOTc0LCJleHAiOjE2NjMwOTM1NzQsIm5iZiI6MTY2MTg4Mzk3NCwianRpIjoiRVR3eE55OWdyMk1BU2FpeCIsInN1YiI6NiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.g9koDNgh5Klry2ZShcfZ0yYm-X5RlVLP67T7TCb5qCQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "iban",
+											"value": "123456789012345678901234",
+											"type": "text"
+										},
+										{
+											"key": "bank_id",
+											"value": "18",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "emm@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "default",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/bank-accounts/create",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"bank-accounts",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MDUyMDQxMywiZXhwIjoxNjQwNTI0MDEzLCJuYmYiOjE2NDA1MjA0MTMsImp0aSI6ImNWVkJIbWJXYVBXT0FEOTQiLCJzdWIiOjE5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.krMHv9hp03kRca-2dERk1pZDHihE-U6hgzv_FifwxuY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "iban",
+											"value": "5465464646416315214545152",
+											"type": "text"
+										},
+										{
+											"key": "bank_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "em@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "default",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-path}}/bank-accounts/update/4",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"bank-accounts",
+										"update",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contact-us",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "emm",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "ema@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "complaint",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "ay 7aga2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-path}}/contact-us",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"contact-us"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "SupportTickets",
+					"item": [
+						{
+							"name": "New ticket",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzYyNzg1NiwiZXhwIjoxNjQ0ODM3NDU2LCJuYmYiOjE2NDM2Mjc4NTYsImp0aSI6IklmQU5KTFdCZkdNeEQ1Y0IiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.AJSr4_GS5E2HTBW-Z2pv75VfMgSukJ9yGXWwd_6HriM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Expect",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ticket_category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "hello this is my first ticket ever",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "my first title",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-path}}/ticket",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"ticket"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get current user tickets",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MjY3NzcwOSwiZXhwIjoxNjQzODg3MzA5LCJuYmYiOjE2NDI2Nzc3MDksImp0aSI6InVnRzN1ZnpxM3k2RVN3aHciLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.xg407xZ9UJ3LYH1jZg84aHm9AZX7jB-Hmn-pHfJ_EGY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{awn-path}}/tickets/?status=replied",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"tickets",
+										""
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "replied",
+											"description": "pending,replied"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ticket details",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MDAwNzgyNSwiZXhwIjoxNjQwMDExNDI1LCJuYmYiOjE2NDAwMDc4MjUsImp0aSI6ImZ3bnA0YjgyNVpuRUpDRVYiLCJzdWIiOjQ3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.Dgq-CzKFGEaOMkIk9zlvqjp6tN2SrIp0q-NKh6Rj_9I",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{awn-path}}/ticket/1",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"ticket",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RateReply",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzYyNzg1NiwiZXhwIjoxNjQ0ODM3NDU2LCJuYmYiOjE2NDM2Mjc4NTYsImp0aSI6IklmQU5KTFdCZkdNeEQ1Y0IiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.AJSr4_GS5E2HTBW-Z2pv75VfMgSukJ9yGXWwd_6HriM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "rating",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "review",
+											"value": "this is my review",
+											"description": "optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-path}}/ticket/9/rate",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"ticket",
+										"9",
+										"rate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Wallet",
+					"item": [
+						{
+							"name": "Wallet transactions",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLXNhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjQ0OTIzODk5LCJleHAiOjE2NDYxMzM0OTksIm5iZiI6MTY0NDkyMzg5OSwianRpIjoiMlhNRnpRd0w4aDBvanljbCIsInN1YiI6MTcsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.hw1Ky3y1U34oehHmucR7OeHbTzS8BemB1BL5rqR8fKo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{awn-server}}/wallet",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Chat",
+					"item": [
+						{
+							"name": "Send message",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLmZ1ZGV4LXRlY2gubmV0XC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE2NDA4NTI4NTYsImV4cCI6MTY0MDg1NjQ1NiwibmJmIjoxNjQwODUyODU2LCJqdGkiOiI3bUNzZmtxdEpsUndDYUhmIiwic3ViIjoxOSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.k19di1psu39Lz1p7w_dmptJe8__6zXJ6cIpL6D16F8Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "message",
+											"value": "This is the first message",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/adham/Desktop/اغاني مودي/WhatsApp Image 2021-12-08 at 18.26.04.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-path}}/chat",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"chat"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read all message",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLXNhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjQ2MzEzMjU3LCJleHAiOjE2NDc1MjI4NTcsIm5iZiI6MTY0NjMxMzI1NywianRpIjoiajVSQkJMRzdOVklTZzdJcCIsInN1YiI6MywicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.Qp0sGCVTXLWZpDFjnWBee5m5mhnw-Gyxye3Yu-Cy5Bk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "message",
+											"value": "This is the first message",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/adham/Desktop/اغاني مودي/WhatsApp Image 2021-12-08 at 18.26.04.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{awn-server}}/read-all-chat-messages",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"read-all-chat-messages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get messages",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLXNhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjQ2MzEzMjU3LCJleHAiOjE2NDc1MjI4NTcsIm5iZiI6MTY0NjMxMzI1NywianRpIjoiajVSQkJMRzdOVklTZzdJcCIsInN1YiI6MywicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.Qp0sGCVTXLWZpDFjnWBee5m5mhnw-Gyxye3Yu-Cy5Bk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{awn-server}}/chat",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"chat"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Notifications",
+					"item": [
+						{
+							"name": "Notifications",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLXNhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjQ0OTk5Nzg5LCJleHAiOjE2NDYyMDkzODksIm5iZiI6MTY0NDk5OTc4OSwianRpIjoienlFSEhqQWs3aWU5SFZhNyIsInN1YiI6MywicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9._IMjU7RV-wMxVnRcByoFunQp9Uii9BF_MMn_EduRIKY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "string"
+									}
+								],
+								"url": {
+									"raw": "{{awn-server}}/notifications",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"notifications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Mark read",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLmZ1ZGV4LXRlY2gubmV0XC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE2NDI5MjQxMDEsImV4cCI6MTY0NDEzMzcwMSwibmJmIjoxNjQyOTI0MTAxLCJqdGkiOiIzQVJ4cGc1bVg3Y3gzcUhKIiwic3ViIjoxMzIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.VF8e8dJctzWcGXRO_O1awNntamlyn0lYsDUsMrKCtQc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{awn-server}}/notifications/1/read",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"notifications",
+										"1",
+										"read"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Change languge",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MDg2NDY4NSwiZXhwIjoxNjQwODY4Mjg1LCJuYmYiOjE2NDA4NjQ2ODUsImp0aSI6IjVYMTA5aDNKb2lwcVU0cmkiLCJzdWIiOjE5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.AOPlBC_5XXQER7CH3nslsFdDY1bbaccp0fHieHYsSz0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "string"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "language",
+									"value": "ar",
+									"type": "string"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{awn-path}}/language",
+							"host": [
+								"{{awn-path}}"
+							],
+							"path": [
+								"language"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inside chat or not",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLXNhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjQ3MjU2NTcxLCJleHAiOjE2NDg0NjYxNzEsIm5iZiI6MTY0NzI1NjU3MSwianRpIjoiWEFUZlJWbDVnUGxUREx3VyIsInN1YiI6MywicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.z3eLyveYIBrQaWYa-BrcuJ_nVyocR2iC8ys5mM6e3x8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "in_chat",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{awn-server}}/in-chat",
+							"host": [
+								"{{awn-server}}"
+							],
+							"path": [
+								"in-chat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "Banks",
+					"item": [
+						{
+							"name": "banks",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{awn-server}}/banks",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"banks"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Settings",
+					"item": [
+						{
+							"name": "settings",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{awn-path}}/settings",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"settings"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "eligibility-conditions",
+					"item": [
+						{
+							"name": "eligibility-conditions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{awn-server}}/eligibility-conditions",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"eligibility-conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Step2 - registeration images with text",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "en",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{awn-path}}/eligibility-conditions-2",
+									"host": [
+										"{{awn-path}}"
+									],
+									"path": [
+										"eligibility-conditions-2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Step3 - registeration text only",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{awn-server}}/eligibility-conditions-2",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"eligibility-conditions-2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Pages",
+					"item": [
+						{
+							"name": "privacy",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "lang",
+										"value": "en",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://awn-sa.com/public/api/privacy",
+									"protocol": "https",
+									"host": [
+										"awn-sa",
+										"com"
+									],
+									"path": [
+										"public",
+										"api",
+										"privacy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "terms-and-conditions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "lang",
+										"value": "en",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://awn-sa.com/public/api/terms-and-conditions",
+									"protocol": "https",
+									"host": [
+										"awn-sa",
+										"com"
+									],
+									"path": [
+										"public",
+										"api",
+										"terms-and-conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "about-us",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "lang",
+										"value": "en",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{awn-server}}/about-us",
+									"host": [
+										"{{awn-server}}"
+									],
+									"path": [
+										"about-us"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TicketCategories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{awn-path}}/ticket-categories",
+							"host": [
+								"{{awn-path}}"
+							],
+							"path": [
+								"ticket-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get next referral id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{awn-path}}/next-id",
+							"host": [
+								"{{awn-path}}"
+							],
+							"path": [
+								"next-id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Referral leaderboard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{awn-path}}/referral-leaderboard",
+							"host": [
+								"{{awn-path}}"
+							],
+							"path": [
+								"referral-leaderboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test loan resource",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{awn-server}}/test-loan/503",
+							"host": [
+								"{{awn-server}}"
+							],
+							"path": [
+								"test-loan",
+								"503"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{awn-path}}/regions",
+							"host": [
+								"{{awn-path}}"
+							],
+							"path": [
+								"regions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Region cities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{awn-path}}/regions/2/cities",
+							"host": [
+								"{{awn-path}}"
+							],
+							"path": [
+								"regions",
+								"2",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Loan",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLXNhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjcxMTA4OTMxLCJleHAiOjE2NzIzMTg1MzEsIm5iZiI6MTY3MTEwODkzMSwianRpIjoiZ0lJTUQ1dE03aFR2eWs5USIsInN1YiI6OCwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.yIvLxmfcB-usDPb12XkIdMy1bIxhDejXa2JmY9Bpnos",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "amount",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "online",
+									"description": "wallet,online",
+									"type": "text"
+								},
+								{
+									"key": "user_bank_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{awn-server}}/loans/create",
+							"host": [
+								"{{awn-server}}"
+							],
+							"path": [
+								"loans",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXduLXNhLmNvbVwvcHVibGljXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjYzNjExNDIxLCJleHAiOjE2NjQ4MjEwMjEsIm5iZiI6MTY2MzYxMTQyMSwianRpIjoiUkpPbm96MjduOWFCVDFtUiIsInN1YiI6OCwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.kYLOTcs5DlCemEF624YLJVxoxhkOzQ93TqG0mPTYFOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{awn-server}}/loans",
+							"host": [
+								"{{awn-server}}"
+							],
+							"path": [
+								"loans"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "otp",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user total debt",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MDA4NzMzNiwiZXhwIjoxNjQwMDkwOTM2LCJuYmYiOjE2NDAwODczMzYsImp0aSI6IjV3V1kzb3l6THMwSnEwRlciLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.rD0jd0Gwa6f13UmvBo0XH53CvS7XrMy--hEIeb3EqiE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{awn-path}}/total-debt",
+							"host": [
+								"{{awn-path}}"
+							],
+							"path": [
+								"total-debt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzYyNzg1NiwiZXhwIjoxNjQ0ODM3NDU2LCJuYmYiOjE2NDM2Mjc4NTYsImp0aSI6IklmQU5KTFdCZkdNeEQ1Y0IiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.AJSr4_GS5E2HTBW-Z2pv75VfMgSukJ9yGXWwd_6HriM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "loan_id",
+									"value": "243",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{awn-server}}/loans/verify",
+							"host": [
+								"{{awn-server}}"
+							],
+							"path": [
+								"loans",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resend-code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MjU4MjgyMCwiZXhwIjoxNjQzNzkyNDIwLCJuYmYiOjE2NDI1ODI4MjAsImp0aSI6IndwaDNSTTBmVzBIVEdwYmYiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.LMK5MYZ7jo-LshUAYuocMHN8NdAxb4_gfemNI_6xvmI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "loan_id",
+									"value": "163",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{awn-server}}/loans/resend-code",
+							"host": [
+								"{{awn-server}}"
+							],
+							"path": [
+								"loans",
+								"resend-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24uZnVkZXgtdGVjaC5uZXRcL3B1YmxpY1wvYXBpXC9sb2dpbiIsImlhdCI6MTYzODQzOTQ3NSwiZXhwIjoxNjM4NDQzMDc1LCJuYmYiOjE2Mzg0Mzk0NzUsImp0aSI6ImgwWnFCRmRVYVJnaGFrR1UiLCJzdWIiOjE5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.KfM46U0oC3KL5eK3myQ2qvOcyX7PLzZF19J3pmLSsT8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "emanrashad173@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "loan_id",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://awn.fudex-tech.net/public/api/loans/send-email",
+							"protocol": "https",
+							"host": [
+								"awn",
+								"fudex-tech",
+								"net"
+							],
+							"path": [
+								"public",
+								"api",
+								"loans",
+								"send-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pay",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY2ODQ2MTIwMCwiZXhwIjoxNjY5NjcwODAwLCJuYmYiOjE2Njg0NjEyMDAsImp0aSI6ImlObE5UY2IzNXBCUENtMGciLCJzdWIiOjgsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.zGmvNVsygt4qEubqRc4SjOsDbBJ-5Kwm_mPfQtGxQHA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/adham/Desktop/اغاني مودي/eth - Copy (2).png"
+								},
+								{
+									"key": "loan_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{awn-path}}/loans/pay",
+							"host": [
+								"{{awn-path}}"
+							],
+							"path": [
+								"loans",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cash requests",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hd24udGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MzYyNzg1NiwiZXhwIjoxNjQ0ODM3NDU2LCJuYmYiOjE2NDM2Mjc4NTYsImp0aSI6IklmQU5KTFdCZkdNeEQ1Y0IiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.AJSr4_GS5E2HTBW-Z2pv75VfMgSukJ9yGXWwd_6HriM",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{Adsol-back}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_bank_id",
+									"value": "19",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{awn-path}}/cash-request",
+							"host": [
+								"{{awn-path}}"
+							],
+							"path": [
+								"cash-request"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ELM",
+			"item": [
+				{
+					"name": "Get login link",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "APP-ID",
+								"value": "9a8a1363",
+								"type": "text"
+							},
+							{
+								"key": "APP-KEY",
+								"value": "be9e6752ea22b13f7f50511f49cd90a6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://nafath.api.elm.sa:443/stg/api/v1/oidc/session?requestid=3fa39f10-b058-4455-a793-e2f27a929d43&locale=ar",
+							"protocol": "https",
+							"host": [
+								"nafath",
+								"api",
+								"elm",
+								"sa"
+							],
+							"port": "443",
+							"path": [
+								"stg",
+								"api",
+								"v1",
+								"oidc",
+								"session"
+							],
+							"query": [
+								{
+									"key": "requestid",
+									"value": "3fa39f10-b058-4455-a793-e2f27a929d43"
+								},
+								{
+									"key": "locale",
+									"value": "ar"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get login link PRODUCTION",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "APP-ID",
+								"value": "790f8270",
+								"type": "text"
+							},
+							{
+								"key": "APP-KEY",
+								"value": "a9bbd66b2bad555ddf516c23152c997c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://nafath.api.elm.sa/api/v1/oidc/session?requestid=3fa39f10-b058-4455-a793-e2f27a929d43&locale=ar",
+							"protocol": "https",
+							"host": [
+								"nafath",
+								"api",
+								"elm",
+								"sa"
+							],
+							"path": [
+								"api",
+								"v1",
+								"oidc",
+								"session"
+							],
+							"query": [
+								{
+									"key": "requestid",
+									"value": "3fa39f10-b058-4455-a793-e2f27a929d43"
+								},
+								{
+									"key": "locale",
+									"value": "ar"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get JWK by KID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "APP-ID",
+								"value": "9a8a1363",
+								"type": "text"
+							},
+							{
+								"key": "APP-KEY",
+								"value": "be9e6752ea22b13f7f50511f49cd90a6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://nafath.api.elm.sa:443/stg/api/v1/oidc/jwk",
+							"protocol": "https",
+							"host": [
+								"nafath",
+								"api",
+								"elm",
+								"sa"
+							],
+							"port": "443",
+							"path": [
+								"stg",
+								"api",
+								"v1",
+								"oidc",
+								"jwk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify JWK",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "APP-ID",
+								"value": "9a8a1363",
+								"type": "text"
+							},
+							{
+								"key": "APP-KEY",
+								"value": "be9e6752ea22b13f7f50511f49cd90a6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jwt\":\"tk_cWJgETccBYp7NS9-pazI7n2u4irNtb-tqwrJEErQkdpYHGByEBXQ_TOBimtUABad1i3Xtu_dAvBU8xzW7oumMPY7efWqqAhZYtKSotJ4sjsfTwu5Dxv4sP3dgfTLqyUy4q3lqQxp0kFaIU6wXh6Njlyd-Vsb3Q7_4R97pMVFymRpU4V5_o0W2SVdg5lXvX2aLE48puvm4GyMY0YlETECTJhJmwCimWn9i7Rbtf5LKM3bOvihltv1h5-covef4H9vfuqgokqO3GVtRapO-h7nkPVgkjYvOwlurnxDwOO94RSNpzqRYRWafZXPrwk_Yl53VQ-mfK3uOf-mJ_3eDrQ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nafath.api.elm.sa:443/stg/api/oidc/jwt/valid",
+							"protocol": "https",
+							"host": [
+								"nafath",
+								"api",
+								"elm",
+								"sa"
+							],
+							"port": "443",
+							"path": [
+								"stg",
+								"api",
+								"oidc",
+								"jwt",
+								"valid"
+							],
+							"query": [
+								{
+									"key": "jwt",
+									"value": "tk_cWJgETccBYp7NS9-pazI7n2u4irNtb-tqwrJEErQkdpYHGByEBXQ_TOBimtUABad1i3Xtu_dAvBU8xzW7oumMPY7efWqqAhZYtKSotJ4sjsfTwu5Dxv4sP3dgfTLqyUy4q3lqQxp0kFaIU6wXh6Njlyd-Vsb3Q7_4R97pMVFymRpU4V5_o0W2SVdg5lXvX2aLE48puvm4GyMY0YlETECTJhJmwCimWn9i7Rbtf5LKM3bOvihltv1h5-covef4H9vfuqgokqO3GVtRapO-h7nkPVgkjYvOwlurnxDwOO94RSNpzqRYRWafZXPrwk_Yl53VQ-mfK3uOf-mJ_3eDrQ",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test awn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_token",
+									"value": "eyJraWQiOiJlbG0iLCJhbGciOiJSUzI1NiJ9.eyJlbmdsaXNoTmFtZSI6Ik1PSEFNRUQgQUJEQUxMQSBPTUVSIEFITUVEIiwiYXJhYmljRmF0aGVyTmFtZSI6Iti52KjYr9in2YTZhNmHIiwiZW5nbGlzaEZhdGhlck5hbWUiOiJBQkRBTExBIiwic3ViIjoiMjMxNTE1OTI2NSIsImdlbmRlciI6Ik1hbGUiLCJpc3MiOiJodHRwczpcL1wvd3d3LmlhbS5nb3Yuc2FcL3VzZXJhdXRoIiwiY2FyZElzc3VlRGF0ZUdyZWdvcmlhbiI6IlN1biBEZWMgMTggMDM6MDA6MDAgQVNUIDIwMTEiLCJlbmdsaXNoR3JhbmRGYXRoZXJOYW1lIjoiT01FUiIsInVzZXJpZCI6IjIzMTUxNTkyNjUiLCJpZFZlcnNpb25ObyI6IjciLCJhcmFiaWNOYXRpb25hbGl0eSI6Itin2YTYs9mI2K_Yp9mGIiwiYXJhYmljTmFtZSI6ItmF2K3ZhdivINio2YYg2LnYqNiv2KfZhNmE2Ycg2KjZhiDYudmF2LEg2KfYrdmF2K8iLCJhcmFiaWNGaXJzdE5hbWUiOiLZhdit2YXYryIsIm5hdGlvbmFsaXR5Q29kZSI6IjIwNCIsImlxYW1hRXhwaXJ5RGF0ZUhpanJpIjoiMTQ0NFwvMDNcLzEwIiwibGFuZyI6ImVuIiwiZXhwIjoxNjYxMDg3MzU3LCJpYXQiOjE2NjEwODcyMDcsImlxYW1hRXhwaXJ5RGF0ZUdyZWdvcmlhbiI6IlRodSBPY3QgMDYgMDM6MDA6MDAgQVNUIDIwMjIiLCJpZEV4cGlyeURhdGVHcmVnb3JpYW4iOiJUaHUgT2N0IDA2IDAzOjAwOjAwIEFTVCAyMDIyIiwianRpIjoiaHR0cHM6XC9cL25hZmF0aC5hcGkuZWxtLnNhXC8sOGJiNmFjNmYtZWVjMC00NWM0LWE1MWEtMzY1NzY5ZWFkYWZhIiwiaXNzdWVMb2NhdGlvbkFyIjoi2KzZiNin2LLYp9iqINmG2KzYsdin2YYiLCJwbGFjZU9mQmlydGgiOiIiLCJkb2JIaWpyaSI6IjE0MDhcLzA0XC8xNCIsImNhcmRJc3N1ZURhdGVIaWpyaSI6IjE0MzNcLzAxXC8yMyIsImVuZ2xpc2hGaXJzdE5hbWUiOiJNT0hBTUVEIiwiaXNzdWVMb2NhdGlvbkVuIjoiUGFzc3BvcnQgTmFqcmFuIiwiYXJhYmljR3JhbmRGYXRoZXJOYW1lIjoi2LnZhdixIiwiYXVkIjoiaHR0cHM6XC9cL2F3bi1zYS5jb21cLyIsIm5iZiI6MTY2MTA4NzA1NywibmF0aW9uYWxpdHkiOiJTdWRhbiIsImRvYiI6IlNhdCBEZWMgMDUgMDM6MDA6MDAgQVNUIDE5ODciLCJlbmdsaXNoRmFtaWx5TmFtZSI6IkFITUVEIiwiaWRFeHBpcnlEYXRlSGlqcmkiOiIxNDQ0XC8wM1wvMTAiLCJhc3N1cmFuY2VfbGV2ZWwiOiIiLCJhcmFiaWNGYW1pbHlOYW1lIjoi2KfYrdmF2K8ifQ.Rcd37QyBGlKiHz6CpH5k1I2tOykt7T3tATwwjU-lr9AfwxEft5DvZ1QxpNW7SXyddFZkCLaMUt_BOTruqdcspLTJcQ8LgQbQohbqiVH3xjkwXEGEWw28AW6dqA8n20EfIPFszXNXLKL5dOigIBmrLNYPGqeGQznZQaH1IhrBrELfqHdPpbI6IS7XwTpI9HVagfR8iHn2MP5R-ObBPegYiGqo-Gj3Cz2P9TkRFUzdg0K28379m2H7bYEEKNN4PLHKhvgtYb7kRXWPcLpxVHrKWSjfhkBRgL2jAwRsiJEhok5XbvlMUeWcK3gdFqfDm5GK5UeCNDo0fLXU-y-3AoWGVg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://awn-sa.com/auth/authorize/callback",
+							"protocol": "https",
+							"host": [
+								"awn-sa",
+								"com"
+							],
+							"path": [
+								"auth",
+								"authorize",
+								"callback"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
+		}
+	]
+}
